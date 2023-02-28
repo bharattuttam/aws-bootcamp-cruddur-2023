@@ -1,0 +1,10 @@
+aws budgets create-budget \
+    --account-id $AWS_ACCOUNT_ID \
+    --budget file:/aws/json/budget.json \
+    --budget notifications-with-subscribers file:/aws/json/budget-notifications-with-subscribers.json
+
+
+   aws sns subscribe \
+    --topic-arn="arn:aws:sns:us-east-1:799631298971:my-topic" \
+    --protocol=email \
+    --notification-endpoint=bharatuttamchandani1000@gmail.com 
